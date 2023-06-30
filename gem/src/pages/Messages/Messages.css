@@ -1,0 +1,9 @@
+.chart-container {
+  display: flex;
+}
+.chart-User-container {
+  width: 30%;
+}
+.chart-message-container {
+  width: 70%;
+}
