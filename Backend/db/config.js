@@ -2,8 +2,17 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const { HOST, PORT, DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT } =
-  process.env;
+const {
+  APP_HOST,
+  PORT,
+  HOST,
+  DB_NAME,
+  DB_USER,
+  DB_PASSWORD,
+  DB_HOST,
+  DB_PORT,
+  JWT_SECRET,
+} = process.env;
 
 export const sqlConfig = {
   user: DB_USER,
@@ -14,4 +23,12 @@ export const sqlConfig = {
     encrypt: false,
     trustServerCertificate: true,
   },
+  jwt_secret: JWT_SECRET,
+};
+
+export const config = {
+  port: PORT,
+  host: HOST,
+  url: APP_HOST,
+  jwt_secret: JWT_SECRET,
 };
