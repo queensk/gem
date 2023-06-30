@@ -1,0 +1,82 @@
+.chart-thread {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.chart-thread-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.chart-thread-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 60%;
+  margin: 10px;
+}
+
+.chart-thread-message p {
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.chart-thread-message span {
+  font-size: small;
+}
+
+.right {
+  align-self: flex-end;
+}
+
+.right p {
+  background-color: lightblue;
+}
+
+.right span {
+  align-self: flex-end;
+}
+
+.chart-thread-form {
+  display: flex;
+  background-color: #ddd;
+  padding: 3%;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.chart-thread-form input {
+  width: 80%;
+  padding: 2%;
+  flex: 1;
+  background: #ddd;
+  outline: none;
+  border: 1px solid rgb(0, 196, 65);
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+.chart-thread-form button {
+  width: 20%;
+  margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.23s;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.chart-thread-form button:hover {
+  background: rgb(0, 180, 50);
+}

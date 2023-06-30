@@ -1,0 +1,29 @@
+.stats {
+  display: flex;
+  align-items: center;
+}
+.likes {
+  padding: 1% 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.likes span {
+  margin: 0 5px;
+}
+.likes:hover {
+  color: red;
+  cursor: pointer;
+}
+.followers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.followers span {
+  margin: 0 5px;
+}
+.followers:hover {
+  color: blue;
+  cursor: pointer;
+}

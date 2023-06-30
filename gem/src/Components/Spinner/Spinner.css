@@ -1,0 +1,36 @@
+.load-wrapp {
+  width: 100vw; /* make the wrapper take the full viewport width */
+  height: 100vh; /* make the wrapper take the full viewport height */
+  position: fixed; /* make the wrapper fixed on the screen */
+  top: 0; /* position the wrapper at the top */
+  left: 0; /* position the wrapper at the left */
+  display: flex; /* make the wrapper a flex container */
+  align-items: center; /* center the items vertically */
+  justify-content: center; /* center the items horizontally */
+}
+.square {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #4b9cdb;
+}
+
+.load {
+  margin: 0; /* remove any margin from the load element */
+}
+
+.load .square {
+  animation: loadingSquare 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+@keyframes loadingSquare {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(70px, 0) rotate(360deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
