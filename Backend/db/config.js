@@ -20,7 +20,7 @@ export const sqlConfig = {
   database: DB_NAME,
   server: DB_HOST,
   options: {
-    encrypt: false,
+    encrypt: true,
     trustServerCertificate: true,
   },
   jwt_secret: JWT_SECRET,
