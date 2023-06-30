@@ -1,0 +1,16 @@
+.profile {
+  padding: 4%;
+  margin: 1%;
+  font-size: 1.5;
+  line-height: 1.5;
+}
+.profile_info {
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile_info p {
+  text-align: center;
+  width: 70%;
+}
