@@ -1,7 +1,7 @@
-const api = (data, message, status) => {
+const apiJSON = (data, message, status) => {
   return {
     status: status || false,
-    data: data || null,
+    data: data || {},
     message: message || null,
     pagination: {
       next_page: null,
@@ -9,4 +9,4 @@ const api = (data, message, status) => {
     },
   };
 };
-export default api;
+export default apiJSON;
