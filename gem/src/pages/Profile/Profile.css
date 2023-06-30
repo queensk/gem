@@ -1,0 +1,40 @@
+.edit_profile-container {
+  padding: 1%;
+  display: flex;
+}
+
+.edit_profile-container_left {
+  width: 30%;
+}
+
+.edit_profile-container_right {
+  width: 70%;
+}
+.edit_profile-container_left_top {
+  padding: 2%;
+}
+.edit_profile-container_left_top h1 {
+  text-align: center;
+  width: 50%;
+}
+
+.edit_profile-container_left_top ul {
+  list-style: none;
+  width: 70%;
+}
+.edit_profile-container_left_top ul li {
+  border-left: 2px solid #2015ff;
+  padding: 5%;
+  line-height: 1.5;
+  letter-spacing: 1%;
+  margin: 1%;
+  background-color: aliceblue;
+  border-radius: 0 2% 2% 0;
+  font-size: 20px;
+  transition: 0.3s ease-in-out all;
+}
+.edit_profile-container_left_top ul li:hover,
+.edit_profile-container_left_top ul li.active {
+  border-left: 2px solid #3fdbf0;
+  cursor: pointer;
+}
