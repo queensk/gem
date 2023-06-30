@@ -1,25 +1,34 @@
 import Express from "express";
 import mssql from "mssql";
-import { sqlConfig } from "./db/config.js";
-import userRoutes from "./route/user/user-route.js";
+import { sqlConfig, config } from "./db/config.js";
+// import {
+//   userRoutes,
+//   portfolioRoutes,
+//   portfolioItems,
+//   followers,
+// } from "./route/user/route.js";
+import { appRoutes } from "./route/user/route.js";
+import bodyParser from "body-parser";
+import userAuthorized from "./middleware/authMiddleware.js";
+import cors from "cors";
 
 const pool = await mssql.connect(sqlConfig);
 const request = pool.request();
 
 const app = Express();
+app.use(bodyParser.json());
+app.use(Express.urlencoded({ extended: true }));
+app.use(userAuthorized);
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-// users route
-userRoutes(app);
+appRoutes(app);
 
-app.get("/one", async (req, res) => {
-  const result = await request.query("SELECT * FROM UsereActivity.Users");
-  res.send(result.recordset);
+app.listen(config.port || 8080, () => {
+  console.log(`Server is running on`);
 });
-app.get("/about", (req, res) => {});
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+
+export default app;
